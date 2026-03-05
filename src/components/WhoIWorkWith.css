@@ -1,0 +1,22 @@
+.who-headline {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -.025em;
+  margin-bottom: 3.5rem;
+}
+
+.who-headline em {
+  font-style: italic;
+  color: var(--pink);
+}
+
+.who-body {
+  margin-left: 40%;
+  max-width: 520px;
+}
+
+@media(max-width: 860px) {
+  .who-headline { font-size: clamp(2rem, 7vw, 3rem); }
+  .who-body { margin-left: 0; max-width: 100%; }
+}

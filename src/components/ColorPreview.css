@@ -1,0 +1,176 @@
+/* ─── Color Preview Page ───────────────────────────────────── */
+
+.cp-wrapper {
+  min-height: 100vh;
+  padding: 80px 40px;
+  background-color: #ffffff;
+  font-family: var(--font);
+}
+
+.cp-header-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 16px;
+}
+
+.cp-header-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.cp-header-sub {
+  font-size: 0.95rem;
+  color: #6b6b6b;
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+/* ─── Grid ─────────────────────────────────────────────────── */
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1000px) {
+  .cp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Card ─────────────────────────────────────────────────── */
+
+.cp-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-card-top {
+  padding: 16px 20px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.cp-option-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cp-hex {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Swatch bar ───────────────────────────────────────────── */
+
+.cp-swatch-bar {
+  height: 6px;
+  width: 100%;
+}
+
+/* ─── Mini Hero ────────────────────────────────────────────── */
+
+.cp-mini-hero {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.cp-mini-name {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cp-mini-opening {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.35;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+}
+
+.cp-mini-tagline {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.cp-mini-subline {
+  font-size: 0.78rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+.cp-mini-cta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 8px 20px;
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+/* ─── Footer ───────────────────────────────────────────────── */
+
+.cp-card-footer {
+  padding: 16px 20px 20px;
+  background: #fff;
+  border-top: 1px solid #e8e8e8;
+}
+
+.cp-color-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.cp-color-note {
+  font-size: 0.78rem;
+  color: #6b6b6b;
+  line-height: 1.55;
+}
+
+/* ─── Footer instruction ───────────────────────────────────── */
+
+.cp-instruction {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid #e8e8e8;
+}

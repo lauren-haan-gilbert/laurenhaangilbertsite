@@ -1,0 +1,63 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.photo-stack {
+  position: relative;
+  height: 580px;
+  width: 100%;
+}
+
+.stack-img {
+  position: absolute;
+}
+
+.stack-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Water photo — top left */
+.stack-img--back {
+  width: 280px;
+  height: 240px;
+  top: 0;
+  left: 0;
+  transform: rotate(-2deg);
+  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* Headshot — center right, no extra shadow (frame built in) */
+.stack-img--front {
+  width: 240px;
+  height: 290px;
+  top: 140px;
+  right: 20px;
+  transform: rotate(1.5deg);
+  z-index: 2;
+}
+
+/* Connections card — bottom left, no extra shadow (frame built in) */
+.stack-img--mid {
+  width: 260px;
+  height: 280px;
+  bottom: 0;
+  left: 10px;
+  transform: rotate(-1.5deg);
+  z-index: 3;
+}
+
+.about-text {
+  width: 100%;
+}
+
+@media(max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .photo-stack { height: 480px; }
+}

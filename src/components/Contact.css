@@ -1,0 +1,42 @@
+.contact-inner {
+  max-width: 580px;
+}
+
+.contact-inner h2 em {
+  font-style: italic;
+  color: var(--pink);
+}
+
+.ff {
+  border-bottom: 1px solid #E4E0DC;
+  padding: 1.3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  transition: border-color .25s;
+}
+
+.ff:focus-within { border-color: var(--pink); }
+
+.ff label {
+  font-size: .62rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--light);
+}
+
+.ff input,
+.ff textarea {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink);
+  resize: none;
+  width: 100%;
+  cursor: none;
+}
+
+.ff textarea { height: 80px; }

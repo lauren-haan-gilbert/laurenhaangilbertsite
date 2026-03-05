@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --white:#ffffff;
+  --cream:#FAFAF8;
+  --off:#FAFAF8;
+  --ink:#1A1A18;
+  --mid:#555550;
+  --light:#AAAAAA;
+  --pink:#D0788E;
+  --pink-pale:#FDF0F4;
+  --pink-soft:#E8A8BC;
+  --gold:#C8A04C;
+  --teal:#2A7878;
+  --card-alt:#FDF8F8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  font-weight:400;
+  background:var(--white);
+  color:var(--ink);
+  overflow-x:hidden;
+  font-size:17px;
+  line-height:1.75;
+  cursor:none;
+}
+
+/* CURSOR */
+#threadCanvas{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:9998}
+.cursor-dot{position:fixed;width:5px;height:5px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+
+/* TEXT LINKS */
+.tlink{
+  display:inline-flex;align-items:center;gap:.85rem;
+  font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;font-weight:400;
+  border-bottom:1px solid var(--pink-soft);padding-bottom:2px;
+  transition:gap .25s,color .2s;
+  background:none;border-top:none;border-left:none;border-right:none;
+  font-family:'DM Sans',sans-serif;cursor:none;white-space:nowrap;
+}
+.tlink:hover{gap:1.4rem;color:var(--pink)}
+.tlink::after{content:'\2192'}
+.tlink.teal{color:var(--teal);border-bottom-color:rgba(42,120,120,.28)}
+.tlink.teal:hover{color:var(--pink)}
+
+/* LAYOUT */
+.wrap{max-width:1100px;margin:0 auto;padding:0 7vw}
+.section, .bg-cream {
+  padding: 12vh 0;
+}
+.bg-cream{background:var(--cream)}
+
+/* REVEAL ANIMATION */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:.12s}
+.d2{transition-delay:.24s}
+
+/* TYPOGRAPHY */
+.tag{
+  font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--pink);margin-bottom:1.6rem;font-weight:400;
+  display:flex;align-items:center;gap:.8rem;
+}
+.tag::before{content:'';width:1.4rem;height:1px;background:var(--pink)}
+h2{font-size:clamp(2rem,3.2vw,3rem);font-weight:300;line-height:1.12;letter-spacing:.05em;margin-bottom:1.8rem}
+.body-p{font-size:1rem;color:var(--mid);line-height:1.85;margin-bottom:1.2rem}
+.pullquote{
+  border-left:2px solid var(--pink-soft);padding-left:1.4rem;
+  font-style:italic;color:var(--ink);font-size:1.02rem;margin-top:1.8rem;line-height:1.7;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  body{cursor:auto}
+  #threadCanvas,.cursor-dot{display:none}
 }

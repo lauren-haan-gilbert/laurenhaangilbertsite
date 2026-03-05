@@ -1,0 +1,23 @@
+.footer {
+  padding: 2.2rem 7vw;
+  border-top: 1px solid #EEEAE8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fn {
+  font-size: .65rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--light);
+}
+
+.fc {
+  font-size: .65rem;
+  color: var(--light);
+}
+
+@media(max-width:860px) {
+  .footer { flex-direction: column; gap: .5rem; text-align: center; }
+}

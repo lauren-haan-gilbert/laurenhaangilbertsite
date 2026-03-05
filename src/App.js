@@ -1,25 +1,57 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import CursorThread from './components/CursorThread';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import WhoIWorkWith from './components/WhoIWorkWith';
+import ThoughtProcessBlock from './components/ThoughtProcessBlock';
+import WhatWeDoTogether from './components/WhatWeDoTogether';
+import About from './components/About';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import QuestionsPage from './components/QuestionsPage';
 
-function App() {
+export default function App() {
+  const [page, setPage] = useState('home');
+
+  const showPage = (name) => {
+    setPage(name);
+    window.scrollTo(0, 0);
+  };
+
+  const goTo = (id) => {
+    if (page !== 'home') {
+      setPage('home');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="site">
+      <CursorThread />
+      <Nav showPage={showPage} goTo={goTo} currentPage={page} />
+
+      {page === 'home' && (
+        <>
+          <Hero showPage={showPage} goTo={goTo} />
+          <WhoIWorkWith />
+          <ThoughtProcessBlock />
+          <WhatWeDoTogether goTo={goTo} />
+          <About />
+          <Contact />
+          <Footer />
+        </>
+      )}
+
+      {page === 'questions' && (
+        <QuestionsPage showPage={showPage} goTo={goTo} />
+      )}
     </div>
   );
 }
-
-export default App;
