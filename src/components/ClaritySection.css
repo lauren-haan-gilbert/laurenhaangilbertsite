@@ -1,0 +1,38 @@
+.clarity {
+
+  padding: 140px 7vw;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+.clarity-inner {
+
+  max-width: 720px;
+
+}
+
+.clarity h2 {
+
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+
+  color: #6B6580;
+
+  margin-bottom: 40px;
+
+}
+
+.clarity p {
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 21px;
+  line-height: 1.7;
+
+  color: #6B6580;
+
+  margin-bottom: 26px;
+
+}

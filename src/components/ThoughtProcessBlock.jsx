@@ -2,9 +2,9 @@ import { useEffect, useRef } from 'react';
 import './ThoughtProcessBlock.css';
 
 const LINES = [
-  { id: 't0', text: 'What decision are you actually trying to make?' },
-  { id: 't1', text: 'Who needs to act on the answer?' },
-  { id: 't2', text: 'What would change if it became clear?' },
+  { id: 't0', text: 'What would change for a real person if this worked?' },
+  { id: 't1', text: 'What else is true?' },
+  { id: 't2', text: 'Where are we pushing harder instead of stepping back?' },
   { id: 't3', text: "What's the smallest thing that could help?" },
   { id: 't4', text: "Let's find out together.", isFinal: true },
 ];
@@ -212,3 +212,4 @@ export default function ThoughtProcessBlock() {
     </div>
   );
 }
+

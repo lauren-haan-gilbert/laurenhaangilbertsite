@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 import './About.css';
 
 export default function About() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="bg-cream" id="about" style={{ padding: '9vh 0' }}>
       <div className="wrap">

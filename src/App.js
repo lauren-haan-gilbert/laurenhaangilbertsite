@@ -3,7 +3,7 @@ import './App.css';
 import CursorThread from './components/CursorThread';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import WhoIWorkWith from './components/WhoIWorkWith';
+import ClaritySection from './components/ClaritySection';
 import ThoughtProcessBlock from './components/ThoughtProcessBlock';
 import WhatWeDoTogether from './components/WhatWeDoTogether';
 import About from './components/About';
@@ -40,7 +40,7 @@ export default function App() {
       {page === 'home' && (
         <>
           <Hero showPage={showPage} goTo={goTo} />
-          <WhoIWorkWith />
+          <ClaritySection />
           <ThoughtProcessBlock />
           <WhatWeDoTogether goTo={goTo} />
           <About />
