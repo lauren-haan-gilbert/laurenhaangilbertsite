@@ -5,7 +5,7 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import ClaritySection from './components/ClaritySection';
 import ThoughtProcessBlock from './components/ThoughtProcessBlock';
-import WhatWeDoTogether from './components/WhatWeDoTogether';
+import OffersSection from './components/OfferSection';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -42,7 +42,7 @@ export default function App() {
           <Hero showPage={showPage} goTo={goTo} />
           <ClaritySection />
           <ThoughtProcessBlock />
-          <WhatWeDoTogether goTo={goTo} />
+          <OffersSection />
           <About />
           <Contact />
           <Footer />
