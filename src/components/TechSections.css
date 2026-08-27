@@ -1,0 +1,346 @@
+/* ── Shared reveal animation ── */
+.ts-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.ts-reveal.ts-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Shared heading — inherits the site's purple-grey tone */
+.ts-heading {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.12;
+  color: #6B6580;
+  margin-bottom: 1.6rem;
+}
+
+.ts-heading em {
+  font-style: italic;
+  color: var(--pink);
+}
+
+/* Conversation section — teal tag, pink em */
+.ts-convo .tag { color: var(--teal); }
+.ts-convo .tag::before { background: var(--teal); }
+
+.ts-body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #6B6580;
+  max-width: 62ch;
+  margin-bottom: 1.4rem;
+}
+
+/* ── 1. RAND banner — deep purple, distinct from animation zone ── */
+.ts-rand {
+  padding: 80px 7vw 120px;
+  background: #1c1628;
+  border-top: 1px solid rgba(160, 140, 200, 0.12);
+}
+
+.ts-rand .ts-heading { color: rgba(255, 255, 255, 0.92); }
+
+.ts-rand .ts-body { color: rgba(255, 255, 255, 0.62); max-width: 56ch; }
+
+.ts-rand .tag { color: rgba(255, 255, 255, 0.42); }
+.ts-rand .tag::before { background: rgba(255, 255, 255, 0.42); }
+
+.ts-rand .tlink {
+  color: rgba(255, 255, 255, 0.88);
+  border-bottom-color: rgba(255, 255, 255, 0.28);
+}
+.ts-rand .tlink:hover { color: #7ecece; }
+
+.ts-rand-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ts-rand .tlink {
+  margin-top: 0.6rem;
+}
+
+/* ── 2. File overview ── */
+.ts-overview {
+  padding: 120px 7vw;
+  background: #f7f6f4;
+}
+
+.ts-overview-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ts-overview-intro {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.2;
+  color: #6B6580;
+  margin-bottom: 1.6rem;
+  max-width: 52ch;
+}
+
+/* 4-step cards row */
+.ts-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 64px;
+  border-top: 1px solid rgba(107, 101, 128, 0.18);
+}
+
+.ts-step {
+  padding: 32px 28px 32px 16px;
+  border-right: 1px solid rgba(107, 101, 128, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ts-step:last-child {
+  border-right: none;
+}
+
+.ts-step-word {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.ts-step:nth-child(1) .ts-step-word { color: var(--pink); }
+.ts-step:nth-child(2) .ts-step-word { color: #7B6FA0; }
+.ts-step:nth-child(3) .ts-step-word { color: var(--gold); }
+.ts-step:nth-child(4) .ts-step-word { color: var(--teal); }
+
+.ts-step-sub {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(107, 101, 128, 0.6);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 700px) {
+  .ts-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ts-step:nth-child(2) { border-right: none; }
+  .ts-step:nth-child(3),
+  .ts-step:nth-child(4) { border-top: 1px solid rgba(107, 101, 128, 0.18); }
+}
+
+/* ── 3. Conversation ── */
+.ts-convo {
+  padding: 120px 7vw 66px;
+  background: var(--white);
+}
+
+.ts-convo-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 400px);
+  gap: clamp(3rem, 6vw, 7rem);
+  align-items: center;
+}
+
+.ts-convo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ts-convo-text .tlink {
+  margin-top: 1.8rem;
+}
+
+/* Image stack */
+.ts-convo-images {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.ts-img-headshot {
+  width: 100%;
+  border-radius: 2px;
+  display: block;
+}
+
+.ts-img-card {
+  width: 72%;
+  align-self: flex-end;
+  margin-top: -4rem;
+  border-radius: 2px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 32px rgba(107, 101, 128, 0.14);
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 860px) {
+  .ts-convo-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-convo-images {
+    order: -1;
+    max-width: 420px;
+  }
+
+  .ts-img-card { margin-top: -3rem; }
+}
+
+/* ── Overview turquoise highlighter ── */
+@keyframes overview-highlight-draw {
+  0%   { background-size:  0%  50%; background-position: 0 72%; }
+  4%   { background-size:  3%  48%; background-position: 0 70%; }
+  12%  { background-size: 10%  52%; background-position: 0 73%; }
+  20%  { background-size: 18%  50%; background-position: 0 71%; }
+  28%  { background-size: 20%  53%; background-position: 0 72%; }
+  38%  { background-size: 34%  51%; background-position: 0 70%; }
+  50%  { background-size: 50%  54%; background-position: 0 73%; }
+  58%  { background-size: 56%  50%; background-position: 0 71%; }
+  68%  { background-size: 68%  52%; background-position: 0 72%; }
+  80%  { background-size: 84%  50%; background-position: 0 70%; }
+  90%  { background-size: 95%  52%; background-position: 0 72%; }
+  100% { background-size: 100% 50%; background-position: 0 72%; }
+}
+
+.overview-highlight {
+  background-image: linear-gradient(
+    to right,
+    rgba(42, 120, 120, 0) 0%,
+    rgba(42, 120, 120, 0.26) 6%,
+    rgba(106, 190, 190, 0.18) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: 0 72%;
+  background-size: 0% 50%;
+  display: inline;
+  padding: 0 2px;
+}
+
+.overview-highlight.overview-highlight-active {
+  animation: overview-highlight-draw 5.5s ease-in 0.3s both;
+}
+
+/* ── 4. Not ready checklist — aqua node + quote layout ── */
+.ts-checklist {
+  padding: 57px 7vw 80px;
+  background: #f7f7f5;
+}
+
+.ts-checklist::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: rgba(200, 160, 76, 0.3);
+  margin: 0 auto 48px;
+}
+
+.ts-checklist-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
+}
+
+/* Aqua node image */
+.ts-checklist-node-wrap {
+  flex-shrink: 0;
+  width: 352px;
+  height: 352px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ts-checklist-node {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateY(-28px) rotate(-9deg) scale(0.88);
+}
+
+@keyframes node-settle {
+  from { opacity: 0; transform: translateY(-28px) rotate(-9deg) scale(0.88); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes node-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-9px) rotate(1.8deg); }
+}
+
+.ts-checklist-node.node-visible {
+  animation:
+    node-settle 1.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both,
+    node-float  4s ease-in-out 1.3s infinite;
+}
+
+/* Text side */
+.ts-checklist-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ts-checklist-invite {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  font-weight: 500;
+  font-style: italic;
+  color: #6B6580;
+  line-height: 1.28;
+  margin: 0;
+}
+
+.ts-checklist-sub {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(107, 101, 128, 0.72);
+  max-width: 48ch;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.ts-checklist-sub em {
+  font-style: italic;
+  color: var(--teal);
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .ts-checklist {
+    padding: 40px 7vw 56px;
+  }
+
+  .ts-checklist-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .ts-checklist-node-wrap {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+  }
+}

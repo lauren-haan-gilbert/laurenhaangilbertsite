@@ -1,38 +1,99 @@
 .clarity {
-
   padding: 140px 7vw;
-
-  display: flex;
-  justify-content: center;
-
 }
 
 .clarity-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-  max-width: 720px;
+.clarity h2,
+.clarity p {
+  max-width: 680px;
+}
 
+/* Scroll reveal */
+.clarity-inner.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.clarity-inner.reveal.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .clarity h2 {
-
   font-family: "DM Sans", sans-serif;
   font-weight: 600;
   font-size: 36px;
-
   color: #6B6580;
-
   margin-bottom: 40px;
-
 }
 
 .clarity p {
-
   font-family: "DM Sans", sans-serif;
   font-size: 21px;
   line-height: 1.7;
-
   color: #6B6580;
-
   margin-bottom: 26px;
+}
 
+/* Differentiated color for the sub-labels */
+.clarity-block-title {
+  font-size: 0.96rem !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pink) !important;
+  margin-bottom: 10px !important;
+  font-weight: 500;
+  opacity: 1;
+}
+
+/* Closing line — sits in a slightly inset position */
+.clarity-closing {
+  margin-top: 44px !important;
+  padding-left: 0;
+}
+
+.clarity-closing em {
+  font-style: italic;
+}
+
+/* Hand-drawn highlighter sweep — pale lavender, slow and human */
+@keyframes highlight-draw {
+  0%   { background-size:  0%  52%; background-position: 0 70%; }
+  4%   { background-size:  3%  49%; background-position: 0 68%; }
+  12%  { background-size: 11%  54%; background-position: 0 71%; }
+  20%  { background-size: 18%  51%; background-position: 0 70%; }
+  26%  { background-size: 20%  53%; background-position: 0 71%; } /* brief pause */
+  34%  { background-size: 32%  56%; background-position: 0 72%; }
+  44%  { background-size: 46%  50%; background-position: 0 69%; }
+  52%  { background-size: 54%  54%; background-position: 0 71%; }
+  58%  { background-size: 57%  52%; background-position: 0 70%; } /* brief pause */
+  68%  { background-size: 72%  55%; background-position: 0 72%; }
+  80%  { background-size: 86%  51%; background-position: 0 69%; }
+  90%  { background-size: 96%  53%; background-position: 0 71%; }
+  100% { background-size: 100% 52%; background-position: 0 70%; }
+}
+
+.clarity-highlight {
+  /* Transparent leading edge so it fades in as it sweeps, like the typed text */
+  background-image: linear-gradient(
+    to right,
+    rgba(100, 88, 195, 0) 0%,
+    rgba(100, 88, 195, 0.30) 6%,
+    rgba(172, 155, 230, 0.22) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: 0 70%;
+  background-size: 0% 52%;
+  display: inline;
+  padding: 0 3px;
+}
+
+/* Fires when the closing paragraph scrolls into view (separate observer) */
+.clarity-closing.highlight-active .clarity-highlight {
+  animation: highlight-draw 5.5s ease-in 0.4s both;
 }

@@ -87,7 +87,7 @@ export default function Hero() {
 
   useEffect(() => {
 
-    const lines = ['Clarity begins with', 'the right question.'];
+    const lines = ['Technology is only as good', 'as the decision behind it.'];
     const text = lines.join('\n');
 
     const el = typedRef.current;
@@ -173,36 +173,45 @@ export default function Hero() {
 
     <section className="hero">
 
-      <div className="hero-inner">
+      {/* ── Full-viewport "wow" zone ── */}
+      <div className="hero-viewport">
 
-        <div className="hero-grid">
+        <div className="hero-inner">
 
-          <h1 className="hero-headline">
+          <div className="hero-grid">
 
-            <span ref={typedRef} className="hero-typedWrap">
+            <div className="hero-left">
 
-              <span
-                ref={cursorRef}
-                className="hero-cursor"
-                aria-hidden="true"
-              />
+              <h1 className="hero-headline">
 
-            </span>
+                <span ref={typedRef} className="hero-typedWrap">
 
-          </h1>
+                  <span
+                    ref={cursorRef}
+                    className="hero-cursor"
+                    aria-hidden="true"
+                  />
 
-          <div className="hero-visual">
+                </span>
 
-            <div className="hero-visualWrap">
+              </h1>
 
-              <img
-                ref={imgRef}
-                src="/simple_drawing.png"
-                alt="Lauren constellation drawing"
-                className="hero-drawing"
-                onMouseEnter={handleEnter}
-                onMouseLeave={handleLeave}
-              />
+            </div>
+
+            <div className="hero-visual">
+
+              <div className="hero-visualWrap">
+
+                <img
+                  ref={imgRef}
+                  src="/simple_drawing.png"
+                  alt="Lauren constellation drawing"
+                  className="hero-drawing"
+                  onMouseEnter={handleEnter}
+                  onMouseLeave={handleLeave}
+                />
+
+              </div>
 
             </div>
 
@@ -210,15 +219,29 @@ export default function Hero() {
 
         </div>
 
+        <div
+          className="hero-scroll"
+          onClick={() => {
+            const lower = document.querySelector('.hero-lower');
+            if (lower) lower.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          ↓
+        </div>
+
       </div>
 
-      <div
-        className="hero-scroll"
-        onClick={() =>
-          window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
-        }
-      >
-        ↓
+      {/* ── Marketing text below the fold ── */}
+      <div className="hero-lower">
+        <div className="hero-lower-inner">
+          <div className="hero-lower-quote">
+            <p className="hero-body">
+              Make sure you know where technology can make a difference, and what it will take to make the right move.
+            </p>
+            {/* TODO: replace # with lead-magnet URL once ready */}
+            <a className="tlink teal hero-cta-link" href="#">Start now</a>
+          </div>
+        </div>
       </div>
 
     </section>

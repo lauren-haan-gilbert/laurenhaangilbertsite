@@ -1,24 +1,55 @@
 .offers-section {
+  position: relative;        /* anchors the absolute canvas */
   padding: 140px 10vw;
   background: #12151f;
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+/* Ghost node canvas — behind all content */
+.offers-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Content sits above the canvas */
+.offers-body {
+  position: relative;
+  z-index: 1;
 }
 
 .offers-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 80px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* BLOCK (not "card") */
+/* BLOCK */
 .offer-block {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  /* Scroll reveal */
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
+
+.offer-block.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger the three blocks */
+.offer-block:nth-child(2) { transition-delay: 0.14s; }
+.offer-block:nth-child(3) { transition-delay: 0.28s; }
 
 /* SMALL LABEL */
 .offer-eyebrow {
@@ -28,7 +59,7 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* TITLE */
+/* TITLE — inherits the site's heading weight/style */
 .offer-title {
   font-size: 1.9rem;
   font-weight: 300;
@@ -36,51 +67,24 @@
   letter-spacing: 0.02em;
 }
 
-/* SUBTITLE */
-.offer-subtitle {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-/* BODY TEXT */
-.offer-body p {
+/* BODY TEXT wrapper */
+.offer-body-text p {
   font-size: 0.95rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 0.9rem;
 }
 
-/* OUTCOME */
-.offer-outcome {
-  margin-top: 10px;
+/* Italic accent phrase */
+.offer-body-text em {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-.offer-outcome-title {
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-  margin-bottom: 8px;
-}
-
-.offer-outcome p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.offer-outcome ul {
-  padding-left: 18px;
-}
-
-.offer-outcome li {
-  margin-bottom: 6px;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-/* BUTTON */
+/* BUTTON / LINK */
 .offer-button {
-  margin-top: 20px;
+  display: inline-block;
+  margin-top: 8px;
   padding: 10px 18px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
@@ -89,7 +93,9 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
+  text-decoration: none;
+  font-family: inherit;
 }
 
 .offer-button:hover {
@@ -100,10 +106,6 @@
 @media (max-width: 900px) {
   .offers-container {
     grid-template-columns: 1fr;
-    gap: 100px;
+    gap: 80px;
   }
 }
-
-
-
-

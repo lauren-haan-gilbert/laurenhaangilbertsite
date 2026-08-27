@@ -2,17 +2,40 @@
 
   position: relative;
 
-  min-height: 100svh;
-
-  display: grid;
-  place-items: center;
-
-  padding: 6rem 7vw 4rem;
+  /* Horizontal padding shared by viewport zone and lower text */
+  padding: 0 7vw;
 
   font-family: "DM Sans", sans-serif;
 
   color: #6B6580;
 
+}
+
+/* Full-viewport dramatic zone — headline + image fill one screen */
+.hero-viewport {
+
+  position: relative;
+
+  height: 100svh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 6rem 0 4rem;
+
+}
+
+/* Marketing text below the fold — full-width cream strip */
+.hero-lower {
+  margin: 0 -7vw;
+  padding: 5rem 7vw 6rem;
+  background: #f7f6f4;
+  border-top: 1px solid rgba(42, 120, 120, 0.14);
+}
+
+.hero-lower-inner {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .hero-inner {
@@ -58,7 +81,7 @@
 
   gap: clamp(1.2rem, 2vw, 2rem);
 
-  grid-template-columns: minmax(0,1.15fr) minmax(320px,.85fr);
+  grid-template-columns: 1.7fr minmax(240px, 320px);
 
 }
 
@@ -66,13 +89,13 @@
 
   margin: 0;
 
-  line-height: 1.06;
+  line-height: 1.12;
 
   font-weight: 500;
 
   letter-spacing: -0.02em;
 
-  font-size: clamp(2.4rem,5vw,4rem);
+  font-size: clamp(2rem,3.3vw,3.1rem);
 
   color: #6B6580;
 
@@ -136,6 +159,38 @@
 
 }
 
+/* Slightly more prominent than the base .tlink */
+.hero-cta-link {
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.2em !important;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.8rem;
+}
+
+/* Quote wrapper — border on the group, not just the paragraph */
+.hero-lower-quote {
+  border-left: 2px solid rgba(42, 120, 120, 0.32);
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.8rem;
+}
+
+.hero-body {
+  font-size: 1.14rem;
+  line-height: 1.75;
+  color: #6B6580;
+  max-width: 52ch;
+  opacity: 0.88;
+}
+
 .hero-visual {
 
   justify-self: start;
@@ -156,7 +211,7 @@
 
   place-items: center;
 
-  transform: translateX(-40px);
+  /* transform removed — wider text column pushes image right naturally */
 
 }
 
@@ -186,7 +241,7 @@
 
   transform: translateX(-50%);
 
-  font-size: 22px;
+  font-size: 30px;
 
   color: #6B6580;
 
@@ -202,7 +257,7 @@
 
 .hero-scroll.visible {
 
-  opacity: 0.55;
+  opacity: 0.75;
 
 }
 
@@ -218,7 +273,7 @@
 
 @media (max-width: 860px) {
 
-  .hero {
+  .hero-viewport {
 
     padding-top: 5.5rem;
 
@@ -234,10 +289,13 @@
 
   .hero-visualWrap {
 
-    transform: none;
-
     width: min(420px, 84vw);
 
+  }
+
+  .hero-lower {
+    padding: 3rem 7vw 4rem;
+    margin: 0 -7vw;
   }
 
 }

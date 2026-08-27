@@ -262,7 +262,7 @@ export default function ThoughtProcessBlock() {
 
   useEffect(() => {
     const section = sectionRef.current;
-    if (!section) return;
+    if (!(section instanceof Element)) return;
 
     const st = stateRef.current;
 

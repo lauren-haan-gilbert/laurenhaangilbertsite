@@ -2,13 +2,13 @@ import './Contact.css';
 
 export default function Contact() {
   return (
-    <div className="section wrap" id="contact">
+    <div className="wrap contact-section" id="contact">
       <p className="tag reveal">Get in touch</p>
-      <h2 className="reveal d1" style={{ marginBottom: '1rem' }}>
-        Ready to<br /><em>start?</em>
+      <h2 className="reveal d1" style={{ marginBottom: '0.5rem' }}>
+        We&apos;d Love to Hear About<br /><em>Your Projects!</em>
       </h2>
-      <p className="body-p reveal d1" style={{ marginBottom: '2.5rem' }}>
-        Reach out. We'll find out together if this is a fit.
+      <p className="body-p reveal d1" style={{ marginBottom: '0.5rem' }}>
+        hello@laurenhaangilbert.com
       </p>
       <form className="reveal d2" onSubmit={e => e.preventDefault()}>
         <div className="ff">
@@ -20,11 +20,11 @@ export default function Contact() {
           <input type="email" placeholder="your@email.com" />
         </div>
         <div className="ff">
-          <label>What brings you here</label>
-          <textarea placeholder="Tell me a little about what you're working through..." />
+          <label>Your message</label>
+          <textarea placeholder="Tell me a little about what you&apos;re working through..." />
         </div>
         <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-          <button type="submit" className="tlink">Send message</button>
+          <button type="submit" className="tlink">Submit Message</button>
         </div>
       </form>
     </div>

@@ -5,11 +5,12 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import ClaritySection from './components/ClaritySection';
 import ThoughtProcessBlock from './components/ThoughtProcessBlock';
-import OffersSection from './components/OfferSection';
-import About from './components/About';
+import { RANDSection, FileOverviewSection, ConversationSection, ChecklistSection } from './components/TechSections';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import QuestionsPage from './components/QuestionsPage';
+
+/* OffersSection and About kept on disk — not rendered in current layout. */
 
 export default function App() {
   const [page, setPage] = useState('home');
@@ -42,9 +43,10 @@ export default function App() {
           <Hero showPage={showPage} goTo={goTo} />
           <ClaritySection />
           <ThoughtProcessBlock />
-          <OffersSection />
-          <About />
-          <Contact />
+          <RANDSection />
+          <FileOverviewSection />
+          <ConversationSection />
+          <ChecklistSection />
           <Footer />
         </>
       )}
