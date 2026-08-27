@@ -150,9 +150,9 @@
   border: 1px solid rgba(208,120,142,.18);
   border-radius: 10px;
   padding: .7rem 1rem;
-  font-size: .82rem;
+  font-size: .9rem;
   color: var(--mid);
-  max-width: 210px;
+  max-width: 240px;
   text-align: center;
   pointer-events: none;
   transform: translate(-50%, -100%) translateY(-16px);
