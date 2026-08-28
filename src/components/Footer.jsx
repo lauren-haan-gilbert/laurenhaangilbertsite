@@ -1,6 +1,11 @@
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer({ showPage }) {
+  const nav = (page) => (e) => {
+    e.preventDefault();
+    if (showPage) { showPage(page); }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -8,8 +13,8 @@ export default function Footer() {
         <div className="footer-col">
           <p className="footer-col-heading">About Us</p>
           <ul>
-            <li>KVK: 63660713</li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li>KVK: 62660713</li>
+            <li><a href="/privacy" onClick={nav('privacy')}>Privacy Policy</a></li>
             <li><a href="#">Our Values</a></li>
             <li><a href="#">Experience</a></li>
           </ul>
@@ -30,7 +35,7 @@ export default function Footer() {
           <ul>
             <li>Almere, The Netherlands</li>
             <li><a href="mailto:hello@laurenhaangilbert.com">hello@laurenhaangilbert.com</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="/cookies" onClick={nav('cookies')}>Cookie Policy</a></li>
           </ul>
         </div>
 

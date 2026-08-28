@@ -29,8 +29,8 @@
 .hero-lower {
   margin: 0 -7vw;
   padding: 5rem 7vw 6rem;
-  background: #f7f6f4;
-  border-top: 1px solid rgba(42, 120, 120, 0.14);
+  background: #f0ede8;
+  border-top: 1px solid rgba(42, 120, 120, 0.22);
 }
 
 .hero-lower-inner {
@@ -175,12 +175,24 @@
 
 /* Quote wrapper — border on the group, not just the paragraph */
 .hero-lower-quote {
-  border-left: 2px solid rgba(42, 120, 120, 0.32);
-  padding-left: 1.4rem;
+  border-left: 2px solid rgba(42, 120, 120, 0.45);
+  padding-left: 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.8rem;
+  gap: 1.4rem;
+}
+
+.hero-lower-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+  background: rgba(42, 120, 120, 0.1);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
 }
 
 .hero-body {

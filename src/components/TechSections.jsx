@@ -154,16 +154,17 @@ export function ChecklistSection() {
       <div className="ts-checklist-inner ts-reveal" ref={ref}>
 
         <div className="ts-checklist-text">
+          <span className="ts-checklist-tag">Free · 7 Questions</span>
           <p className="ts-checklist-invite">
-            Not ready for a conversation yet?
+            Not sure where to start?
           </p>
           <p className="ts-checklist-sub">
-            Start with the <em>7 Questions Checklist</em> — a short, self-guided
-            exercise to clarify where your technology decision really stands, and
-            what would need to be true before the next step makes sense.
+            The <em>7 Questions Checklist</em> is a short, self-guided exercise to
+            clarify where your technology decision really stands — and what would
+            need to be true before the next step makes sense. No cost, no commitment.
           </p>
           {/* TODO: replace # with lead-magnet URL */}
-          <a className="tlink teal" href="#">Get it now</a>
+          <a className="tlink teal" href="#">Download the free checklist</a>
         </div>
 
         <div className="ts-checklist-node-wrap">

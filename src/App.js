@@ -9,6 +9,10 @@ import { RANDSection, FileOverviewSection, ConversationSection, ChecklistSection
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import QuestionsPage from './components/QuestionsPage';
+import AboutPage from './components/AboutPage';
+import WorkPage from './components/WorkPage';
+import PrivacyPage from './components/PrivacyPage';
+import CookiePage from './components/CookiePage';
 
 /* OffersSection and About kept on disk — not rendered in current layout. */
 
@@ -47,12 +51,28 @@ export default function App() {
           <FileOverviewSection />
           <ConversationSection />
           <ChecklistSection />
-          <Footer />
+          <Footer showPage={showPage} />
         </>
       )}
 
       {page === 'questions' && (
         <QuestionsPage showPage={showPage} goTo={goTo} />
+      )}
+
+      {page === 'work' && (
+        <WorkPage showPage={showPage} goTo={goTo} />
+      )}
+
+      {page === 'about' && (
+        <AboutPage showPage={showPage} goTo={goTo} />
+      )}
+
+      {page === 'privacy' && (
+        <PrivacyPage showPage={showPage} />
+      )}
+
+      {page === 'cookies' && (
+        <CookiePage showPage={showPage} />
       )}
     </div>
   );

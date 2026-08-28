@@ -235,11 +235,12 @@ export default function Hero() {
       <div className="hero-lower">
         <div className="hero-lower-inner">
           <div className="hero-lower-quote">
+            <span className="hero-lower-tag">The 7 Questions</span>
             <p className="hero-body">
               Make sure you know where technology can make a difference, and what it will take to make the right move.
             </p>
             {/* TODO: replace # with lead-magnet URL once ready */}
-            <a className="tlink teal hero-cta-link" href="#">Start now</a>
+            <a className="tlink teal hero-cta-link" href="#">Get the checklist</a>
           </div>
         </div>
       </div>

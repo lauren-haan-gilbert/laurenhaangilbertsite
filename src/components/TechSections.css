@@ -239,7 +239,8 @@
 /* ── 4. Not ready checklist — aqua node + quote layout ── */
 .ts-checklist {
   padding: 57px 7vw 80px;
-  background: #f7f7f5;
+  background: #edeae4;
+  border-top: 1px solid rgba(42, 120, 120, 0.18);
 }
 
 .ts-checklist::before {
@@ -302,6 +303,18 @@
   gap: 1rem;
 }
 
+.ts-checklist-tag {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+  background: rgba(42, 120, 120, 0.12);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+
 .ts-checklist-invite {
   font-family: "DM Sans", sans-serif;
   font-size: clamp(1.35rem, 2.2vw, 1.9rem);
@@ -315,10 +328,10 @@
 .ts-checklist-sub {
   font-family: "DM Sans", sans-serif;
   font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(107, 101, 128, 0.72);
+  line-height: 1.75;
+  color: rgba(107, 101, 128, 0.82);
   max-width: 48ch;
-  margin: 0.4rem 0 0.8rem;
+  margin: 0.2rem 0 0.6rem;
 }
 
 .ts-checklist-sub em {
