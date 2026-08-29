@@ -224,3 +224,39 @@
   max-width: 520px;
   margin: 0 auto 2.5rem;
 }
+
+@media (max-width: 600px) {
+  .c-intro {
+    padding: 6vh 7vw 4vh;
+  }
+
+  .c-stage {
+    height: 68vh;
+    min-height: 420px;
+  }
+
+  .c-node.type-subject {
+    width: 64px; height: 64px;
+    font-size: .72rem;
+  }
+
+  .c-node.type-verb {
+    width: 58px; height: 58px;
+    font-size: .72rem;
+  }
+
+  .c-node.type-lens {
+    width: 72px; height: 72px;
+    font-size: .68rem;
+  }
+
+  .q-bubble {
+    max-width: 180px;
+    font-size: .8rem;
+    padding: .55rem .8rem;
+  }
+
+  .c-btn {
+    cursor: pointer;
+  }
+}

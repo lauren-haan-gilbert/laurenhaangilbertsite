@@ -167,7 +167,8 @@ function genQ(a, b) {
   ]);
 }
 
-const CONN_D = 100, DISC_D = 128;
+const CONN_D_DESKTOP = 100, DISC_D_DESKTOP = 128;
+const CONN_D_MOBILE  =  60, DISC_D_MOBILE  =  80;
 
 export default function QuestionsPage({ showPage, goTo }) {
   const stageRef  = useRef(null);
@@ -190,12 +191,21 @@ export default function QuestionsPage({ showPage, goTo }) {
 
     const W = stage.offsetWidth;
     const H = stage.offsetHeight || Math.round(window.innerHeight * 0.72);
+    const isMobile = W < 600;
 
-    const tokens = [
+    const rnd = arr => arr.slice().sort(() => Math.random() - 0.5);
+    const allTokens = [
       ...SUBJECTS.map(t => ({ label: t, type: 'subject' })),
       ...VERBS.map(t    => ({ label: t, type: 'verb' })),
       ...LENSES.map(t   => ({ label: t, type: 'lens' })),
     ];
+    const tokens = isMobile
+      ? [
+          ...rnd(SUBJECTS.map(t => ({ label: t, type: 'subject' }))).slice(0, 3),
+          ...rnd(VERBS.map(t    => ({ label: t, type: 'verb' }))).slice(0, 2),
+          ...rnd(LENSES.map(t   => ({ label: t, type: 'lens' }))).slice(0, 1),
+        ]
+      : allTokens;
 
     s.nodes = tokens.map((t, i) => ({
       id: i, label: t.label, type: t.type,
@@ -228,10 +238,12 @@ export default function QuestionsPage({ showPage, goTo }) {
       el.addEventListener('pointercancel', () => n.dragging = false);
     });
 
-    tick(W, H, stage, container, svg, s);
+    const CONN_D = isMobile ? CONN_D_MOBILE : CONN_D_DESKTOP;
+    const DISC_D = isMobile ? DISC_D_MOBILE : DISC_D_DESKTOP;
+    tick(W, H, stage, container, svg, s, CONN_D, DISC_D);
   };
 
-  const tick = (W, H, stage, container, svg, s) => {
+  const tick = (W, H, stage, container, svg, s, CONN_D, DISC_D) => {
     const rm = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
     if (!rm) {
       s.nodes.forEach(n => {
@@ -284,7 +296,7 @@ export default function QuestionsPage({ showPage, goTo }) {
         }
       }
     }
-    s.raf = requestAnimationFrame(() => tick(W, H, stage, container, svg, s));
+    s.raf = requestAnimationFrame(() => tick(W, H, stage, container, svg, s, CONN_D, DISC_D));
   };
 
   const shuffle = () => {
