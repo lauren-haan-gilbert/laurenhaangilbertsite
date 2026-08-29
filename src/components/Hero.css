@@ -310,36 +310,21 @@
     height: auto;
     min-height: 100svh;
     padding: 5.5rem 0 5rem;
-    /* center content vertically in the available space */
-    align-content: center;
-  }
-
-  .hero-inner {
-    gap: 0.6rem;
+    place-items: center;
   }
 
   .hero-grid {
-    gap: 1.6rem;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .hero-headline {
     font-size: clamp(1.65rem, 6.5vw, 2rem);
-  }
-
-  .hero-visualWrap {
-    width: min(200px, 54vw);
-    margin: 0 auto;
-  }
-
-  .hero-visual {
-    margin-top: 0;
-    justify-self: center !important;
     text-align: center;
   }
 
-  .hero-visualWrap {
-    width: min(200px, 54vw);
-    margin: 0 auto;
+  .hero-visual {
+    display: none;
   }
 
   .hero-scroll {
