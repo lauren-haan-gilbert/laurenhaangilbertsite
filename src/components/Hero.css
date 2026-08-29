@@ -333,7 +333,13 @@
 
   .hero-visual {
     margin-top: 0;
-    justify-self: center;
+    justify-self: center !important;
+    text-align: center;
+  }
+
+  .hero-visualWrap {
+    width: min(200px, 54vw);
+    margin: 0 auto;
   }
 
   .hero-scroll {
