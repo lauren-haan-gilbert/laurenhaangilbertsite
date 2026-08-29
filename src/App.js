@@ -17,10 +17,11 @@ import CookiePage from './components/CookiePage';
 /* OffersSection and About kept on disk — not rendered in current layout. */
 
 export default function App() {
-  const [page, setPage] = useState('home');
+  const [page, setPage] = useState(() => window.location.hash.slice(1) || 'home');
 
   const showPage = (name) => {
     setPage(name);
+    window.location.hash = name === 'home' ? '' : name;
     window.scrollTo(0, 0);
   };
 
