@@ -139,6 +139,40 @@
   .ts-step:nth-child(4) { border-top: 1px solid rgba(107, 101, 128, 0.18); }
 }
 
+@media (max-width: 600px) {
+  .ts-rand,
+  .ts-overview,
+  .ts-convo {
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .ts-checklist {
+    padding: 48px 6vw 56px;
+  }
+
+  .ts-checklist-inner {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .ts-checklist-node-wrap {
+    width: 140px;
+    height: 140px;
+    align-self: center;
+  }
+
+  .ts-convo-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-convo-images {
+    max-width: 280px;
+  }
+}
+
 /* ── 3. Conversation ── */
 .ts-convo {
   padding: 120px 7vw 66px;

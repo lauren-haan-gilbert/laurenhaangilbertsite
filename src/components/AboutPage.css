@@ -256,3 +256,19 @@
   }
   .ap-col:last-child { border-bottom: none; }
 }
+
+@media (max-width: 600px) {
+  .ap-magazine {
+    padding: 0 6vw;
+  }
+  .ap-headline {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+  .ap-spread-text {
+    padding: 1.8rem 0 1.8rem;
+  }
+  .ap-foot {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+}

@@ -312,6 +312,37 @@
 
 }
 
+@media (max-width: 600px) {
+
+  .hero-viewport {
+    height: auto;
+    min-height: 100svh;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-grid {
+    gap: 2rem;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.65rem, 6.5vw, 2rem);
+  }
+
+  .hero-visualWrap {
+    width: min(220px, 58vw);
+  }
+
+  .hero-visual {
+    margin-top: 0;
+  }
+
+  .hero-scroll {
+    bottom: 20px;
+  }
+
+}
+
 @media (prefers-reduced-motion: reduce) {
 
   .hero-cursor.pulse2 {
