@@ -22,13 +22,13 @@ export default function Nav({ showPage, goTo, currentPage }) {
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => { e.preventDefault(); goTo('work'); }}>
+          <a href="#" onClick={e => { e.preventDefault(); showPage('work'); }}>
             Work
           </a>
         </li>
         <li>
-          <a href="#" onClick={e => { e.preventDefault(); goTo('contact'); }}>
-            Contact
+          <a href="#" onClick={e => { e.preventDefault(); showPage('about'); }}>
+            About
           </a>
         </li>
       </ul>
