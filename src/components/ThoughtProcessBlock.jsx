@@ -104,7 +104,10 @@ export default function ThoughtProcessBlock() {
     }
 
     function makeNode(imgIndex) {
-      const size = 160 + Math.random() * 220;
+      const isMobile = W < 640;
+      const size = isMobile
+        ? 60 + Math.random() * 60
+        : 160 + Math.random() * 220;
       const isTurquoise = imgIndex === 10;
       const forbidden = getForbiddenZone();
 
@@ -148,13 +151,14 @@ export default function ThoughtProcessBlock() {
       H = canvas.height = section.offsetHeight;
 
       if (!nodes.length) {
-        const indices = NODE_FILES.map((_, i) => i).sort(() => Math.random() - 0.5);
+        const count = W < 640 ? 5 : NODE_FILES.length;
+        const indices = NODE_FILES.map((_, i) => i).sort(() => Math.random() - 0.5).slice(0, count);
         indices.forEach((i) => nodes.push(makeNode(i)));
       }
     }
 
     function repulseNodes() {
-      const MIN = 200;
+      const MIN = W < 640 ? 80 : 200;
 
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {

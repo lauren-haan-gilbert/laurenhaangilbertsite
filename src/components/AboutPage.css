@@ -260,12 +260,21 @@
 @media (max-width: 600px) {
   .ap-magazine {
     padding: 0 6vw;
+    border-left: none;
+    border-right: none;
   }
   .ap-headline {
     font-size: clamp(2rem, 8vw, 2.8rem);
   }
   .ap-spread-text {
     padding: 1.8rem 0 1.8rem;
+  }
+  .ap-spread-photo {
+    height: 64vw;
+    max-height: 280px;
+  }
+  .ap-spread-photo img {
+    object-position: center 10%;
   }
   .ap-foot {
     padding-left: 6vw;

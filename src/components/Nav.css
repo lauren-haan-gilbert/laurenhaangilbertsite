@@ -44,7 +44,7 @@
   color: var(--pink);
 }
 
-/* Hamburger button — hidden on desktop */
+/* Hamburger — hidden on desktop */
 .site-nav__burger {
   display: none;
   flex-direction: column;
@@ -54,8 +54,9 @@
   border: none;
   cursor: pointer;
   padding: 6px 4px;
-  z-index: 600;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .site-nav__burger span {
@@ -84,6 +85,32 @@
 @media (max-width: 600px) {
   .site-nav {
     padding: 1.2rem 6vw;
+    transition: bottom 0.3s ease, background 0.3s ease;
+  }
+
+  /* Full-screen overlay: expand the nav itself */
+  .site-nav.nav-open {
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Pin name + burger to the top when expanded */
+  .site-nav.nav-open .site-nav__name {
+    position: absolute;
+    top: 1.2rem;
+    left: 6vw;
+  }
+
+  .site-nav.nav-open .site-nav__burger {
+    position: absolute;
+    top: 1rem;
+    right: 6vw;
   }
 
   .site-nav__burger {
@@ -91,23 +118,18 @@
   }
 
   .site-nav__links {
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.97);
+    display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2.8rem;
-    z-index: 550;
-    display: none;
+    gap: 2.6rem;
   }
 
-  .site-nav__links.open {
+  .site-nav.nav-open .site-nav__links {
     display: flex;
   }
 
   .site-nav__links a {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 0.2em;
     color: var(--ink);
   }

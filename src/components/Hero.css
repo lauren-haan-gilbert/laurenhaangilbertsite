@@ -286,23 +286,15 @@
 @media (max-width: 860px) {
 
   .hero-viewport {
-
     padding-top: 5.5rem;
-
-    place-items: start center;
-
   }
 
   .hero-grid {
-
     grid-template-columns: 1fr;
-
   }
 
   .hero-visualWrap {
-
     width: min(420px, 84vw);
-
   }
 
   .hero-lower {
@@ -317,12 +309,17 @@
   .hero-viewport {
     height: auto;
     min-height: 100svh;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding: 5.5rem 0 5rem;
+    /* center content vertically in the available space */
+    align-content: center;
+  }
+
+  .hero-inner {
+    gap: 0.6rem;
   }
 
   .hero-grid {
-    gap: 2rem;
+    gap: 1.6rem;
   }
 
   .hero-headline {
@@ -330,11 +327,14 @@
   }
 
   .hero-visualWrap {
-    width: min(220px, 58vw);
+    width: min(200px, 54vw);
+    margin: 0 auto;
   }
 
   .hero-visual {
     margin-top: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-scroll {

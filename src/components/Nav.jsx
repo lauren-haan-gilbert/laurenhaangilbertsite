@@ -10,7 +10,7 @@ export default function Nav({ showPage, goTo, currentPage }) {
   };
 
   return (
-    <nav className="site-nav">
+    <nav className={`site-nav${open ? ' nav-open' : ''}`}>
       <a
         href="#"
         className="site-nav__name"
@@ -28,7 +28,7 @@ export default function Nav({ showPage, goTo, currentPage }) {
         <span /><span /><span />
       </button>
 
-      <ul className={`site-nav__links${open ? ' open' : ''}`}>
+      <ul className="site-nav__links">
         <li><a href="#" onClick={e => { e.preventDefault(); go('home'); }}>Home</a></li>
         <li><a href="#" onClick={e => { e.preventDefault(); go('questions'); }}>Questions</a></li>
         <li><a href="#" onClick={e => { e.preventDefault(); go('work'); }}>Work</a></li>
