@@ -333,8 +333,7 @@
 
   .hero-visual {
     margin-top: 0;
-    display: flex;
-    justify-content: center;
+    justify-self: center;
   }
 
   .hero-scroll {
