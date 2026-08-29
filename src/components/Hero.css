@@ -315,16 +315,20 @@
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 1.6rem;
   }
 
   .hero-headline {
     font-size: clamp(1.65rem, 6.5vw, 2rem);
-    text-align: center;
   }
 
   .hero-visual {
-    display: none;
+    justify-self: center;
+    margin-top: 0;
+  }
+
+  .hero-visualWrap {
+    width: min(200px, 54vw);
   }
 
   .hero-scroll {

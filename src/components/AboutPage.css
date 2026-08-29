@@ -270,11 +270,11 @@
     padding: 1.8rem 0 1.8rem;
   }
   .ap-spread-photo {
-    height: 80vw;
-    max-height: 380px;
+    height: 60vw;
+    max-height: 300px;
   }
   .ap-spread-photo img {
-    object-position: top center;
+    object-position: center 15%;
   }
   .ap-foot {
     padding-left: 6vw;
