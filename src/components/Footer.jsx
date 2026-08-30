@@ -35,7 +35,7 @@ export default function Footer({ showPage, goToPageElement }) {
         <div className="footer-col">
           <p className="footer-col-heading">Services</p>
           <ul>
-            <li><a href="#" onClick={goToService('service-decision-canvas')}>Decision Session</a></li>
+            <li><a href="#" onClick={goToService('service-decision-canvas')}>Decision Canvas</a></li>
             <li><a href="#" onClick={goToService('service-decision-roadmap')}>Decision Roadmap</a></li>
             <li><a href={CHECKLIST_URL} target="_blank" rel="noopener noreferrer">7 Questions Checklist</a></li>
             <li><a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Project Advisory</a></li>
