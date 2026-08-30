@@ -16,7 +16,7 @@ export default function Footer({ showPage }) {
     setTimeout(() => {
       const el = document.getElementById(serviceId);
       if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 150);
+    }, 400);
   };
 
   return (
@@ -40,7 +40,7 @@ export default function Footer({ showPage }) {
             <li><a href="#" onClick={goToService('service-decision-roadmap')}>Decision Roadmap</a></li>
             <li><a href={CHECKLIST_URL} target="_blank" rel="noopener noreferrer">7 Questions Checklist</a></li>
             <li><a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Project Advisory</a></li>
-            <li><a href="#">Speaking</a></li>
+            <li><a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Speaking</a></li>
           </ul>
         </div>
 

@@ -351,9 +351,9 @@ export default function QuestionsPage({ showPage, goTo }) {
       <div className="c-below">
         <p>These questions come from the framework I use in every Decision Session.
           If you're curious about how a half-day session could help with a decision you're facing, let's talk.</p>
-        <button className="tlink" onClick={() => { showPage('home'); goTo('contact'); }}>
+        <a className="tlink" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3A5nsTcS-Wy2VYIoEASrTnKavGe4kk5iAwJ23ZjT4Q7dhR0hAVijdlmnBx4Qrk3Ly2TPaqL5ac" target="_blank" rel="noopener noreferrer">
           Work with me
-        </button>
+        </a>
       </div>
 
       <Footer />
