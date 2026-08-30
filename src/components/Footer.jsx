@@ -3,7 +3,7 @@ import './Footer.css';
 const CHECKLIST_URL = 'https://laurenhg.myflodesk.com/7questions';
 const BOOKING_URL   = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3A5nsTcS-Wy2VYIoEASrTnKavGe4kk5iAwJ23ZjT4Q7dhR0hAVijdlmnBx4Qrk3Ly2TPaqL5ac';
 
-export default function Footer({ showPage }) {
+export default function Footer({ showPage, goToPageElement }) {
   const nav = (page) => (e) => {
     e.preventDefault();
     if (showPage) { showPage(page); }
@@ -11,12 +11,11 @@ export default function Footer({ showPage }) {
 
   const goToService = (serviceId) => (e) => {
     e.preventDefault();
-    if (!showPage) return;
-    showPage('work');
-    setTimeout(() => {
-      const el = document.getElementById(serviceId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 400);
+    if (goToPageElement) {
+      goToPageElement('work', serviceId);
+    } else if (showPage) {
+      showPage('work');
+    }
   };
 
   return (

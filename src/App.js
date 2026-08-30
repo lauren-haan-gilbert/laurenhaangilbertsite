@@ -25,6 +25,12 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
+  const goToPageElement = (pageName, elementId) => {
+    window._pendingScroll = elementId;
+    setPage(pageName);
+    window.location.hash = pageName;
+  };
+
   const goTo = (id) => {
     if (page !== 'home') {
       setPage('home');
@@ -52,7 +58,7 @@ export default function App() {
           <FileOverviewSection />
           <ConversationSection />
           <ChecklistSection />
-          <Footer showPage={showPage} />
+          <Footer showPage={showPage} goToPageElement={goToPageElement} />
         </>
       )}
 
@@ -61,7 +67,7 @@ export default function App() {
       )}
 
       {page === 'work' && (
-        <WorkPage showPage={showPage} goTo={goTo} />
+        <WorkPage showPage={showPage} goTo={goTo} goToPageElement={goToPageElement} />
       )}
 
       {page === 'about' && (

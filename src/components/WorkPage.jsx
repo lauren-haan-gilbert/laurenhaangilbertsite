@@ -29,11 +29,23 @@ const OFFERS = [
 
 const WORDS = ['The', 'work', 'that', 'happens', 'BREAK', 'before', 'the', 'build', 'begins.'];
 
-export default function WorkPage({ showPage, goTo }) {
+export default function WorkPage({ showPage, goTo, goToPageElement }) {
   const servicesRef = useRef(null);
   const ctaRef      = useRef(null);
   const hlCtaRef    = useRef(null);
   const hlLeadRef   = useRef(null);
+
+  // Consume pending scroll from footer service links
+  useEffect(() => {
+    const id = window._pendingScroll;
+    if (id) {
+      window._pendingScroll = null;
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, []);
 
   // Word-by-word headline
   useEffect(() => {
@@ -149,7 +161,7 @@ export default function WorkPage({ showPage, goTo }) {
         </div>
       </div>
 
-      <Footer showPage={showPage} />
+      <Footer showPage={showPage} goToPageElement={goToPageElement} />
     </div>
   );
 }
