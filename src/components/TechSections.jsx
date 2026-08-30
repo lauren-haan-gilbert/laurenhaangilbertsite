@@ -116,7 +116,7 @@ export function ConversationSection() {
             out where the decision stands, the questions that remain, and what needs to
             happen next.
           </p>
-          <a className="tlink hero-cta-link" href="#contact">Contact us</a>
+          <a className="tlink hero-cta-link" href="mailto:hello@laurenhaangilbert.com">Contact us</a>
         </div>
 
         <div className="ts-convo-images">
@@ -163,8 +163,7 @@ export function ChecklistSection() {
             clarify where your technology decision really stands — and what would
             need to be true before the next step makes sense. No cost, no commitment.
           </p>
-          {/* TODO: replace # with lead-magnet URL */}
-          <a className="tlink teal" href="#">Download the free checklist</a>
+          <a className="tlink teal" href="https://laurenhg.myflodesk.com/7questions" target="_blank" rel="noopener noreferrer">Download the free checklist</a>
         </div>
 
         <div className="ts-checklist-node-wrap">

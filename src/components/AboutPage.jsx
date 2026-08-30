@@ -78,10 +78,8 @@ export default function AboutPage({ showPage, goTo }) {
         <div className="ap-foot reveal" ref={ctaRef}>
           <span className="ap-foot-q">Not sure where to start?</span>
           <div className="ap-foot-links">
-            {/* TODO: replace # with 7 Questions URL */}
-            <a className="tlink teal" href="#">Get the 7 Questions</a>
-            {/* TODO: replace # with booking URL */}
-            <a className="tlink" href="#" onClick={e => { e.preventDefault(); showPage('home'); goTo('contact'); }}>
+            <a className="tlink teal" href="https://laurenhg.myflodesk.com/7questions" target="_blank" rel="noopener noreferrer">Get the 7 Questions</a>
+            <a className="tlink" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3A5nsTcS-Wy2VYIoEASrTnKavGe4kk5iAwJ23ZjT4Q7dhR0hAVijdlmnBx4Qrk3Ly2TPaqL5ac" target="_blank" rel="noopener noreferrer">
               Book a conversation
             </a>
           </div>

@@ -240,7 +240,7 @@ export default function Hero() {
               Make sure you know where technology can make a difference, and what it will take to make the right move.
             </p>
             {/* TODO: replace # with lead-magnet URL once ready */}
-            <a className="tlink teal hero-cta-link" href="#">Get the checklist</a>
+            <a className="tlink teal hero-cta-link" href="https://laurenhg.myflodesk.com/7questions" target="_blank" rel="noopener noreferrer">Get the checklist</a>
           </div>
         </div>
       </div>

@@ -2,20 +2,26 @@ import { useEffect, useRef } from 'react';
 import Footer from './Footer';
 import './WorkPage.css';
 
+const CHECKLIST_URL = 'https://laurenhg.myflodesk.com/7questions';
+const BOOKING_URL   = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3A5nsTcS-Wy2VYIoEASrTnKavGe4kk5iAwJ23ZjT4Q7dhR0hAVijdlmnBx4Qrk3Ly2TPaqL5ac';
+
 const OFFERS = [
   {
     num: '01',
+    id: 'service-decision-canvas',
     title: 'The Decision Canvas',
     body: 'A focused half-day on a single decision. A structured examination of the intended outcome, who it serves, the current cost of inaction, and the change the initiative is expected to deliver. You receive a written decision brief — a clear recommendation to proceed, defer, or reconsider, with the conditions attached.',
   },
   {
     num: '02',
+    id: 'service-decision-roadmap',
     title: 'The Decision Roadmap',
     body: 'For decisions that reach across functions. A deeper engagement that brings each affected perspective into the picture, surfaces where understanding differs, and establishes the distance between the current and intended state. You come away with a sequenced roadmap: the recommended actions, their order, and the conditions for each.',
     featured: true,
   },
   {
     num: '03',
+    id: 'service-project-advisory',
     title: 'Project Advisory',
     body: 'Where a decision leads to a build, I can provide continuity between the objective and the delivery work — an ongoing bridging role that helps ensure what\'s built stays directed toward the intended outcome. The organisation retains ownership of its decision; the practice supports faithful execution of it.',
   },
@@ -116,6 +122,7 @@ export default function WorkPage({ showPage, goTo }) {
         {OFFERS.map((offer, i) => (
           <div
             key={offer.num}
+            id={offer.id}
             className={`wp-service${offer.featured ? ' wp-service--featured' : ''}`}
             style={{ transitionDelay: `${i * 0.1}s` }}
           >
@@ -135,8 +142,8 @@ export default function WorkPage({ showPage, goTo }) {
           or with the checklist.
         </p>
         <div className="wp-cta-links">
-          <a className="tlink teal" href="#">Get the 7 Questions</a>
-          <a className="tlink" href="#" onClick={e => { e.preventDefault(); showPage('home'); goTo('contact'); }}>
+          <a className="tlink teal" href={CHECKLIST_URL} target="_blank" rel="noopener noreferrer">Get the 7 Questions</a>
+          <a className="tlink" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Book a conversation
           </a>
         </div>
