@@ -38,12 +38,26 @@
   );
 }
 
+.tpb-label {
+  position: absolute;
+  top: 1.8rem;
+  left: 10vw;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 400;
+  pointer-events: none;
+  user-select: none;
+}
+
 .tpb-thought {
   position: absolute;
   left: 10vw;
   right: 10vw;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(1.1rem, 2.2vw, 1.9rem);
   line-height: 1.5;
   letter-spacing: 0.04em;

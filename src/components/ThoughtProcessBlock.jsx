@@ -3,9 +3,9 @@ import './ThoughtProcessBlock.css';
 
 const LINES = [
   { id: 't0', text: 'What would change for a real person if this worked?' },
-  { id: 't1', text: 'What else is true?' },
-  { id: 't2', text: 'Where are we pushing harder instead of stepping back?' },
-  { id: 't3', text: "What's the smallest thing that could help?" },
+  { id: 't1', text: 'What are we assuming without knowing?' },
+  { id: 't2', text: "Whose perspective isn't in this conversation yet?" },
+  { id: 't3', text: 'What would need to be true for this investment to make sense?' },
   { id: 't4', text: "Let's find out together.", isFinal: true },
 ];
 
@@ -403,6 +403,7 @@ export default function ThoughtProcessBlock() {
     <div className="tpb-section" ref={sectionRef}>
       <canvas className="tpb-canvas" ref={canvasRef} />
       <div className="tpb-stage" ref={stageRef}>
+        <span className="tpb-label">Questions from the framework</span>
         {LINES.map((line) => (
           <p
             key={line.id}
