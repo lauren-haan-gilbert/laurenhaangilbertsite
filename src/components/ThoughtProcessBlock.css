@@ -42,6 +42,7 @@
   position: absolute;
   top: 1.8rem;
   left: 10vw;
+  z-index: 3;
   font-family: 'DM Sans', sans-serif;
   font-size: 0.62rem;
   letter-spacing: 0.2em;

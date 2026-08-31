@@ -2,11 +2,12 @@ import { useEffect, useRef } from 'react';
 import './ThoughtProcessBlock.css';
 
 const LINES = [
-  { id: 't0', text: 'What would change for a real person if this worked?' },
-  { id: 't1', text: 'What are we assuming without knowing?' },
-  { id: 't2', text: "Whose perspective isn't in this conversation yet?" },
-  { id: 't3', text: 'What would need to be true for this investment to make sense?' },
-  { id: 't4', text: "Let's find out together.", isFinal: true },
+  { id: 't0', text: 'Are we assuming or understanding?' },
+  { id: 't1', text: 'Whose perspective is missing?' },
+  { id: 't2', text: 'Are we solving the right problem?' },
+  { id: 't3', text: 'What would change for a real person?' },
+  { id: 't4', text: 'What needs to be true for this to work?' },
+  { id: 't5', text: "Let's find out together.", isFinal: true },
 ];
 
 const NODE_FILES = [
@@ -402,8 +403,8 @@ export default function ThoughtProcessBlock() {
   return (
     <div className="tpb-section" ref={sectionRef}>
       <canvas className="tpb-canvas" ref={canvasRef} />
+      <span className="tpb-label">Questions from the framework</span>
       <div className="tpb-stage" ref={stageRef}>
-        <span className="tpb-label">Questions from the framework</span>
         {LINES.map((line) => (
           <p
             key={line.id}
