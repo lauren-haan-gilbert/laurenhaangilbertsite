@@ -106,15 +106,14 @@ export function ConversationSection() {
             It Starts With<br /><em>A Conversation</em>
           </h2>
           <p className="ts-body">
-            Most work starts with a half-day Decision Session, focused on one technology or
-            data decision.
+            Most engagements begin with a half-day Decision Canvas focused on one technology
+            or data decision.
           </p>
           <p className="ts-body">
-            We look at the problem from different perspectives, highlight where there is
-            agreement, where there isn&apos;t, and what would need to be true for the
-            investment to make sense. I follow up with a written Decision Brief that sets
-            out where the decision stands, the questions that remain, and what needs to
-            happen next.
+            We examine the problem from different perspectives, bring areas of agreement and
+            uncertainty into focus, and establish what must be true for the investment to make
+            sense. Afterwards, I provide a written Decision Brief setting out where the
+            decision stands, what remains unresolved and the most useful next steps.
           </p>
           <a className="tlink hero-cta-link" href="mailto:hello@laurenhaangilbert.com">Contact us</a>
         </div>
@@ -154,16 +153,16 @@ export function ChecklistSection() {
       <div className="ts-checklist-inner ts-reveal" ref={ref}>
 
         <div className="ts-checklist-text">
-          <span className="ts-checklist-tag">Free · 7 Questions</span>
+          <span className="ts-checklist-tag">Free guide · 7 questions</span>
           <p className="ts-checklist-invite">
             Not sure where to start?
           </p>
           <p className="ts-checklist-sub">
-            The <em>7 Questions Checklist</em> is a short, self-guided exercise to
-            clarify where your technology decision really stands — and what would
-            need to be true before the next step makes sense. No cost, no commitment.
+            The <em>7 Questions Checklist</em> is a short, self-guided exercise to help you
+            clarify the decision, test your assumptions and identify what needs to be
+            understood before moving forward.
           </p>
-          <a className="tlink teal" href="https://laurenhg.myflodesk.com/7questions" target="_blank" rel="noopener noreferrer">Download the free checklist</a>
+          <a className="tlink teal" href="https://laurenhg.myflodesk.com/7questions" target="_blank" rel="noopener noreferrer">Get the free checklist</a>
         </div>
 
         <div className="ts-checklist-node-wrap">

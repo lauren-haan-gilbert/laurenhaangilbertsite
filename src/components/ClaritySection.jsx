@@ -46,9 +46,9 @@ export default function ClaritySection() {
           from another.
         </p>
 
-        <p className="clarity-block-title">The brief shapes the solution.</p>
+        <p className="clarity-block-title">The brief defines what gets built.</p>
         <p>
-          Those different perspectives ultimately shape the brief, and the brief shapes what
+          Those different perspectives ultimately shape the brief, and the brief defines what
           suppliers propose, design or build.
         </p>
 

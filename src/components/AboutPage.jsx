@@ -47,7 +47,6 @@ export default function AboutPage({ showPage, goTo }) {
               pressure increases, and the instinct is to reach for what can fix it.
               A better decision is created when we take the time to reflect instead of react.
             </p>
-            <p className="ap-byline">Almere, Netherlands</p>
           </div>
           <div className="ap-spread-photo">
             <img src="/unnamed-3-scaled.jpg" alt="Lauren Haan-Gilbert" />
@@ -59,18 +58,19 @@ export default function AboutPage({ showPage, goTo }) {
         <div className="ap-cols reveal" ref={colsRef}>
           <div className="ap-col">
             <p className="ap-col-head">What I do</p>
-            <p>I help organisations make smarter decisions before they invest in new technology. I talk to people, understand the challenge from different angles, and define the underlying problem before an investment is made.</p>
+            <p>I help organisations make better-informed decisions before committing to new technology. Through focused conversations, I examine the challenge from different perspectives, test assumptions and clarify the problem that needs to be solved.</p>
             <p className="ap-pull">Sometimes the answer is new technology. But not always.</p>
           </div>
           <div className="ap-col">
-            <p className="ap-col-head">The moment I'm useful</p>
-            <p>Businesses are increasingly asked to make decisions at scale. In 2026 and beyond, there's data everywhere and technology that promises to help monetise, strategise and compete.</p>
-            <p>How can you be certain the solution your organisation is reaching for is genuinely the right one? That's the moment I'm useful.</p>
+            <p className="ap-col-head">Before you commit</p>
+            <p>Organisations are being asked to make increasingly consequential decisions about technology and data. The options are multiplying, the pressure to act is growing and every new solution promises an advantage.</p>
+            <p>But how do you know whether the solution your organisation is considering is the right one, or whether the problem needs to be understood differently first?</p>
+            <p>That is where I can help.</p>
           </div>
           <div className="ap-col">
             <p className="ap-col-head">Who I am</p>
-            <p>American-Dutch, based in Almere. Background in coaching, life science and software engineering.</p>
-            <p>I work with a team of designers, engineers and advisors to bring clients the best solutions to their unique challenges.</p>
+            <p>I'm an American-Dutch strategic advisor based in Almere. My background spans coaching, life sciences and software engineering, giving me a perspective that connects people, organisations and technology.</p>
+            <p>When a project calls for additional expertise, I work with a trusted network of designers, engineers and advisors selected for the challenge at hand.</p>
           </div>
         </div>
 

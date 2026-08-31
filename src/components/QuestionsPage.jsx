@@ -325,10 +325,11 @@ export default function QuestionsPage({ showPage, goTo }) {
     <div className="questions-page">
       <div className="c-intro">
         <p className="tag" style={{ justifyContent: 'center' }}>The decision framework</p>
-        <h1>Questions That<br /><em>Change the Frame</em></h1>
+        <h1>Questions Worth<br /><em>Asking First</em></h1>
         <p style={{ marginTop: '1.4rem' }}>
-          Drag the words toward each other. When two meet, the question between them appears.
-          These are drawn from the same framework I bring to every Decision Session.
+          These are the kinds of questions I bring to every Decision Canvas — the ones that
+          help clarify what is really being decided, whose needs matter and what the
+          investment must ultimately deliver. Drag the words together to see them form.
         </p>
       </div>
 
@@ -349,8 +350,7 @@ export default function QuestionsPage({ showPage, goTo }) {
       </div>
 
       <div className="c-below">
-        <p>These questions come from the framework I use in every Decision Session.
-          If you're curious about how a half-day session could help with a decision you're facing, let's talk.</p>
+        <p>Good technology decisions start with the right questions. If you're facing one now and would like to explore it, let's find out together.</p>
         <a className="tlink" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3A5nsTcS-Wy2VYIoEASrTnKavGe4kk5iAwJ23ZjT4Q7dhR0hAVijdlmnBx4Qrk3Ly2TPaqL5ac" target="_blank" rel="noopener noreferrer">
           Work with me
         </a>

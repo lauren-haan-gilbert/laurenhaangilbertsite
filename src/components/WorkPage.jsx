@@ -10,20 +10,20 @@ const OFFERS = [
     num: '01',
     id: 'service-decision-canvas',
     title: 'The Decision Canvas',
-    body: 'A focused half-day on a single decision. A structured examination of the intended outcome, who it serves, the current cost of inaction, and the change the initiative is expected to deliver. You receive a written decision brief — a clear recommendation to proceed, defer, or reconsider, with the conditions attached.',
+    body: 'A focused half-day centred on a single decision. Together, we examine the intended outcome, who it serves, the cost of inaction and the change the initiative is expected to deliver. You receive a written Decision Brief with a clear recommendation to proceed, defer or reconsider, including the conditions that would need to be met.',
   },
   {
     num: '02',
     id: 'service-decision-roadmap',
     title: 'The Decision Roadmap',
-    body: 'For decisions that reach across functions. A deeper engagement that brings each affected perspective into the picture, surfaces where understanding differs, and establishes the distance between the current and intended state. You come away with a sequenced roadmap: the recommended actions, their order, and the conditions for each.',
+    body: 'For decisions that affect multiple functions. This deeper engagement brings the relevant perspectives together, identifies differences in understanding and clarifies the gap between the current and intended state. You receive a sequenced roadmap setting out the recommended actions, their order and the conditions required for each.',
     featured: true,
   },
   {
     num: '03',
     id: 'service-project-advisory',
     title: 'Project Advisory',
-    body: 'Where a decision leads to a build, I can provide continuity between the objective and the delivery work — an ongoing bridging role that helps ensure what\'s built stays directed toward the intended outcome. The organisation retains ownership of its decision; the practice supports faithful execution of it.',
+    body: 'When a decision leads to a build, I can provide continuity from objective through to delivery. In this ongoing role, I help keep the work focused on the intended outcome while your organisation retains ownership of the decision and its implementation.',
   },
 ];
 
@@ -109,12 +109,12 @@ export default function WorkPage({ showPage, goTo, goToPageElement }) {
             )}
           </h1>
           <p className="wp-lead">
-            The success of big technology and data decisions is often determined long before
-            implementation begins. It starts with a{' '}
+            The success of a significant technology or data decision is often determined
+            before implementation begins. It depends on a clear understanding of the
+            problem, agreement about{' '}
             <span className="wp-hl wp-hl--teal" ref={hlLeadRef}>
-              clear objective, aligned stakeholders,
-            </span>{' '}
-            and a strong case for investment.
+              what needs to be achieved and what the investment should deliver.
+            </span>
           </p>
         </div>
         <div className="wp-hero-right">

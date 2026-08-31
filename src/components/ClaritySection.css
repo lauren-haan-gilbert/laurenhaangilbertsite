@@ -46,9 +46,13 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--pink) !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 6px !important;
   font-weight: 500;
   opacity: 1;
+}
+
+.clarity-block-title + p {
+  margin-top: 0;
 }
 
 /* Closing line — sits in a slightly inset position */
