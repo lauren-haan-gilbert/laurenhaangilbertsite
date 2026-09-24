@@ -29,10 +29,10 @@ export default function Nav({ showPage, goTo, currentPage }) {
       </button>
 
       <ul className="site-nav__links">
-        <li><a href="#" onClick={e => { e.preventDefault(); go('home'); }}>Home</a></li>
-        <li><a href="#" onClick={e => { e.preventDefault(); go('questions'); }}>Questions</a></li>
-        <li><a href="#" onClick={e => { e.preventDefault(); go('work'); }}>Work</a></li>
-        <li><a href="#" onClick={e => { e.preventDefault(); go('about'); }}>About</a></li>
+        <li><a href="#" className={currentPage === 'home' ? 'active' : ''} onClick={e => { e.preventDefault(); go('home'); }}>Home</a></li>
+        <li><a href="#" className={currentPage === 'questions' ? 'active' : ''} onClick={e => { e.preventDefault(); go('questions'); }}>Questions</a></li>
+        <li><a href="#" className={currentPage === 'work' ? 'active' : ''} onClick={e => { e.preventDefault(); go('work'); }}>Work</a></li>
+        <li><a href="#" className={currentPage === 'about' ? 'active' : ''} onClick={e => { e.preventDefault(); go('about'); }}>About</a></li>
       </ul>
     </nav>
   );

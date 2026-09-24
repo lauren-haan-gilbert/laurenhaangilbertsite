@@ -222,27 +222,13 @@ export default function Hero() {
         <div
           className="hero-scroll"
           onClick={() => {
-            const lower = document.querySelector('.hero-lower');
-            if (lower) lower.scrollIntoView({ behavior: 'smooth' });
+            const next = document.getElementById('section-clarity');
+            if (next) next.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
         >
           ↓
         </div>
 
-      </div>
-
-      {/* ── Marketing text below the fold ── */}
-      <div className="hero-lower">
-        <div className="hero-lower-inner">
-          <div className="hero-lower-quote">
-            <span className="hero-lower-tag">The Checklist</span>
-            <p className="hero-body">
-              Make sure you know where technology can make a difference, and what it will take to make the right move.
-            </p>
-            {/* TODO: replace # with lead-magnet URL once ready */}
-            <a className="tlink teal hero-cta-link" href="https://laurenhg.myflodesk.com/7questions" target="_blank" rel="noopener noreferrer">Get the 7 Questions</a>
-          </div>
-        </div>
       </div>
 
     </section>

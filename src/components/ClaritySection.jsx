@@ -30,7 +30,7 @@ export default function ClaritySection() {
   }, []);
 
   return (
-    <section className="clarity">
+    <section className="clarity" id="section-clarity">
       <div className="clarity-inner reveal" ref={innerRef}>
 
         <p className="tag">The problem</p>

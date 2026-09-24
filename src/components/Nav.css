@@ -44,6 +44,12 @@
   color: var(--pink);
 }
 
+.site-nav__links a.active {
+  color: var(--pink);
+  border-bottom: 1px solid var(--pink-soft);
+  padding-bottom: 1px;
+}
+
 /* Hamburger — hidden on desktop */
 .site-nav__burger {
   display: none;

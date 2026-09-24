@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap');
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
@@ -83,4 +83,5 @@ h2{font-size:clamp(2rem,3.2vw,3rem);font-weight:300;line-height:1.12;letter-spac
 @media(max-width:860px){
   body{cursor:auto}
   #threadCanvas,.cursor-dot{display:none}
+  .tlink,a,button{cursor:pointer}
 }
